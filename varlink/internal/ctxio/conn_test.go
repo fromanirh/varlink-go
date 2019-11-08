@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/varlink/go/varlink/internal/ctxio"
+	"github.com/fromanirh/varlink-go/varlink/internal/ctxio"
 )
 
 func TestConn(t *testing.T) {
