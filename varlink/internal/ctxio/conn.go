@@ -109,3 +109,7 @@ func (c *Conn) ReadBytes(ctx context.Context, delim byte) ([]byte, error) {
 		return ret.val, ret.err
 	}
 }
+
+func (c *Conn) GetReader() *bufio.Reader {
+	return c.reader
+}

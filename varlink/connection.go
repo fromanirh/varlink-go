@@ -1,6 +1,7 @@
 package varlink
 
 import (
+	"bufio"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -172,6 +173,10 @@ func (c *Connection) Send(ctx context.Context, method string, parameters interfa
 	}
 
 	return receive, nil
+}
+
+func (c *Connection) GetReader() *bufio.Reader {
+	return c.conn.GetReader()
 }
 
 // Call sends a method call and returns the method reply.
