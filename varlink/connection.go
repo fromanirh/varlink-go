@@ -80,6 +80,7 @@ func (e *Error) Error() string {
 // underlying varlink connection.
 type ReadWriterContext interface {
 	WriterContext
+	Read(context.Context, []byte) (int, error)
 	ReadBytes(ctx context.Context, delim byte) ([]byte, error)
 }
 
